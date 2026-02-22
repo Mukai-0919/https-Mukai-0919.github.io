@@ -1,0 +1,116 @@
+/* 全体の土台：中央寄せにして見やすく */
+body {
+  font-family: 'Helvetica Neue', Arial, sans-serif;
+  background-color: #f5f7f9; /* 薄いグレーの背景 */
+  display: flex;
+  justify-content: center;
+  padding: 40px 20px;
+  color: #333;
+}
+
+.container {
+  background: white;
+  width: 100%;
+  max-width: 400px;
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.05); /* 柔らかい影 */
+}
+
+h1 {
+  font-size: 24px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+/* 入力エリア：一体感を出す */
+form {
+  display: flex;
+  gap: 8px; /* 要素間の隙間 */
+  margin-bottom: 20px;
+}
+
+input {
+  flex: 1;
+  padding: 10px 15px;
+  border: 2px solid #eee;
+  border-radius: 6px;
+  outline: none;
+  transition: border-color 0.3s;
+}
+
+input:focus {
+  border-color: #4caf50; /* 選択中に色を変える */
+}
+
+button[type="submit"] {
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+/* リストアイテム：カード形式にする */
+ul {
+  padding: 0;
+}
+
+li {
+  list-style: none;
+  background: #fff;
+  border: 1px solid #f0f0f0;
+  padding: 12px;
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+  border-radius: 8px;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+li:hover {
+  transform: translateY(-2px); /* 少し浮く演出 */
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+}
+
+li span {
+  flex: 1;
+  font-size: 16px;
+}
+
+/* ボタン：共通設定 */
+.complete-btn, .delete-btn {
+  border: none;
+  padding: 6px 12px;
+  cursor: pointer;
+  border-radius: 4px;
+  font-size: 12px;
+  font-weight: bold;
+  transition: opacity 0.2s;
+}
+
+.complete-btn {
+  background-color: #e8f5e9;
+  color: #4caf50;
+  margin-left: 10px;
+}
+
+.delete-btn {
+  background-color: #ffebee;
+  color: #f44336;
+  margin-left: 5px;
+}
+
+.complete-btn:hover, .delete-btn:hover {
+  opacity: 0.8;
+}
+
+/* カウント表示 */
+#task-count {
+  margin-top: 20px;
+  text-align: center;
+  color: #888;
+  font-size: 14px;
+}
